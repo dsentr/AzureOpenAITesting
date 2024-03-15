@@ -21,8 +21,8 @@ llm = AzureChatOpenAI(
 
 
 chain = APIChain.from_llm_and_api_docs(
-    llm,
-    open_meteo_docs.OPEN_METEO_DOCS,
+    llm=llm,
+    api_docs=open_meteo_docs.OPEN_METEO_DOCS,
     verbose=True,
     limit_to_domains=["https://api.open-meteo.com/"],
 )
